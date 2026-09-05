@@ -1,178 +1,172 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-     <link rel="icon" type="image/png" href="favicon.png">
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1583187708021921"
-     crossorigin="anonymous"></script><meta name="google-site-verification" content="2Lb50UNMfFeovlKMeYVosWUjQLYkAz97nY08jwIyxOE" /><!-- SEO Basic Meta Tags -->
-<title>Universal File Converter Pro | تحويل الملفات مجاناً وبأمان</title>
-<meta name="description" content="أداة مجانية وسريعة لتحويل جميع أنواع الملفات (PDF, DOCX, PNG, JPG, MP4, MP3) مباشرة داخل المتصفح وبدون رفع ملفاتك لأي سيرفر خارجي. حماية وخصوصية 100%.">
-<meta name="keywords" content="تحويل ملفات, تحويل PDF الى Word, تحويل صور, تحويل فيديو, تحويل صوت, DOCX to PDF, PNG to JPG, MP4 to MP3, أداة تحويل مجانية">
-<meta name="author" content="Universal File Converter Pro">
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph / Facebook / LinkedIn Meta Tags -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://exprees-store.github.io/convert-pro/">
-<meta property="og:title" content="Universal File Converter Pro | أداة تحويل الملفات الشاملة والمجانية">
-<meta property="og:description" content="حوّل مستنداتك، صورك، وفيديوهاتك فورياً مجاناً وبأعلى درجات الخصوصية مباشرة عبر متصفحك.">
-<meta property="og:image" content="https://exprees-store.github.io/convert-pro/preview-image.png">
-
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Universal File Converter Pro | تحويل الملفات مجاناً">
-<meta name="twitter:description" content="تحويل شامل وسريع للمستندات والصور والميديا آمن 100% وبدون تسجيل.">
-<meta name="twitter:image" content="https://exprees-store.github.io/convert-pro/preview-image.png">
-
-<!-- Favicon Icon -->
-<link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/convert.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Universal File Converter Pro</title>
-  
-  <!-- سكريبت لتفعيل SharedArrayBuffer و FFmpeg على GitHub Pages -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
-
-  <!-- Mammoth extraction engine for DOCX -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
-  
-  <!-- html2pdf engine for Direct PDF generation -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  
-  <!-- docx Library for Word Generation -->
-  <script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
-  
-  <!-- Media Processing Engine (FFmpeg.wasm) -->
-  <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
-
-  <style>
-    :root {
-      --primary: #4f46e5;
-      --bg-main: #0f172a;
-      --card-bg: #1e293b;
-      --card-inner: #0f172a;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --border-color: #334155;
-      --success: #10b981;
-      --danger: #ef4444;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    body {
-      background-color: var(--bg-main);
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
+    <!-- SEO Basic Meta Tags -->
+    <title>Universal File Converter Pro | تحويل الملفات مجاناً وبأمان</title>
+    <meta name="description" content="أداة مجانية وسريعة لتحويل جميع أنواع الملفات (PDF, DOCX, PNG, JPG, MP4, MP3) مباشرة داخل المتصفح وبدون رفع ملفاتك لأي سيرفر خارجي. حماية وخصوصية 100%.">
+    <meta name="keywords" content="تحويل ملفات, تحويل PDF الى Word, تحويل صور, تحويل فيديو, تحويل صوت, DOCX to PDF, PNG to JPG, MP4 to MP3, أداة تحويل مجانية">
+    <meta name="author" content="Universal File Converter Pro">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="2Lb50UNMfFeovlKMeYVosWUjQLYkAz97nY08jwIyxOE" />
 
-    .app-card {
-      background-color: var(--card-bg);
-      border-radius: 16px;
-      padding: 30px;
-      width: 100%;
-      max-width: 650px;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
+    <!-- Open Graph / Facebook / LinkedIn Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://exprees-store.github.io/convert-pro/">
+    <meta property="og:title" content="Universal File Converter Pro | أداة تحويل الملفات الشاملة والمجانية">
+    <meta property="og:description" content="حوّل مستنداتك، صورك، وفيديوهاتك فورياً مجاناً وبأعلى درجات الخصوصية مباشرة عبر متصفحك.">
+    <meta property="og:image" content="https://exprees-store.github.io/convert-pro/preview-image.png">
 
-    .header { text-align: center; margin-bottom: 25px; }
-    .header h1 { font-size: 1.6rem; margin-bottom: 8px; }
-    .header p { color: var(--text-muted); font-size: 0.9rem; }
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Universal File Converter Pro | تحويل الملفات مجاناً">
+    <meta name="twitter:description" content="تحويل شامل وسريع للمستندات والصور والميديا آمن 100% وبدون تسجيل.">
+    <meta name="twitter:image" content="https://exprees-store.github.io/convert-pro/preview-image.png">
 
-    .category-nav {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 6px;
-      background: var(--card-inner);
-      padding: 6px;
-      border-radius: 10px;
-      border: 1px solid var(--border-color);
-      margin-bottom: 20px;
-    }
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/convert.png">
 
-    .cat-btn {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      padding: 10px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
+    <!-- Google AdSense Script (Loaded Once) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1583187708021921" crossorigin="anonymous"></script>
 
-    .cat-btn.active { background-color: var(--primary); color: #fff; }
+    <!-- Processing Engines Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
 
-    .control-group { margin-bottom: 20px; }
-    .control-label { display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; }
+    <style>
+      :root {
+        --primary: #4f46e5;
+        --bg-main: #0f172a;
+        --card-bg: #1e293b;
+        --card-inner: #0f172a;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --border-color: #334155;
+        --success: #10b981;
+        --danger: #ef4444;
+      }
 
-    .select-box {
-      background-color: var(--card-inner);
-      color: var(--text-main);
-      border: 1px solid var(--border-color);
-      padding: 12px;
-      border-radius: 8px;
-      outline: none;
-      width: 100%;
-    }
+      * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+      
+      body {
+        background-color: var(--bg-main);
+        color: var(--text-main);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
 
-    .upload-zone {
-      border: 2px dashed var(--border-color);
-      border-radius: 12px;
-      padding: 30px 15px;
-      text-align: center;
-      cursor: pointer;
-      background: rgba(15, 23, 42, 0.5);
-    }
+      .app-card {
+        background-color: var(--card-bg);
+        border-radius: 16px;
+        padding: 30px;
+        width: 100%;
+        max-width: 650px;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
 
-    .upload-zone:hover { border-color: var(--primary); }
-    #file-input { display: none; }
+      .header { text-align: center; margin-bottom: 25px; }
+      .header h1 { font-size: 1.6rem; margin-bottom: 8px; }
+      .header p { color: var(--text-muted); font-size: 0.9rem; }
 
-    .file-info {
-      display: none;
-      margin-top: 15px;
-      padding: 12px;
-      background: var(--card-inner);
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      font-size: 0.85rem;
-      justify-content: space-between;
-    }
+      .category-nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+        background: var(--card-inner);
+        padding: 6px;
+        border-radius: 10px;
+        border: 1px solid var(--border-color);
+        margin-bottom: 20px;
+      }
 
-    .file-info.active { display: flex; }
+      .cat-btn {
+        background: transparent;
+        border: none;
+        color: var(--text-muted);
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
 
-    .btn-convert {
-      width: 100%;
-      margin-top: 20px;
-      padding: 14px;
-      background-color: var(--primary);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-    }
+      .cat-btn.active { background-color: var(--primary); color: #fff; }
 
-    .btn-convert:disabled { background-color: var(--border-color); cursor: not-allowed; }
+      .control-group { margin-bottom: 20px; }
+      .control-label { display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; }
 
-    .status-area { margin-top: 15px; text-align: center; font-size: 0.9rem; line-height: 1.6; }
-    .status-success { color: var(--success); }
-    .status-error { color: var(--danger); }
-    .status-success a { color: #818cf8; font-weight: bold; }
+      .select-box {
+        background-color: var(--card-inner);
+        color: var(--text-main);
+        border: 1px solid var(--border-color);
+        padding: 12px;
+        border-radius: 8px;
+        outline: none;
+        width: 100%;
+      }
 
-    .privacy-footer {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      max-width: 650px;
-    }
-  </style>
+      .upload-zone {
+        border: 2px dashed var(--border-color);
+        border-radius: 12px;
+        padding: 30px 15px;
+        text-align: center;
+        cursor: pointer;
+        background: rgba(15, 23, 42, 0.5);
+      }
+
+      .upload-zone:hover { border-color: var(--primary); }
+      #file-input { display: none; }
+
+      .file-info {
+        display: none;
+        margin-top: 15px;
+        padding: 12px;
+        background: var(--card-inner);
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        font-size: 0.85rem;
+        justify-content: space-between;
+      }
+
+      .file-info.active { display: flex; }
+
+      .btn-convert {
+        width: 100%;
+        margin-top: 20px;
+        padding: 14px;
+        background-color: var(--primary);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .btn-convert:disabled { background-color: var(--border-color); cursor: not-allowed; }
+
+      .status-area { margin-top: 15px; text-align: center; font-size: 0.9rem; line-height: 1.6; }
+      .status-success { color: var(--success); }
+      .status-error { color: var(--danger); }
+      .status-success a { color: #818cf8; font-weight: bold; }
+
+      .privacy-footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        max-width: 650px;
+      }
+    </style>
 </head>
 <body>
 
@@ -212,6 +206,31 @@
 
   <div class="privacy-footer">
     🔒 <b>الأمان والخصوصية:</b> تتم جميع عمليات التحويل داخل متصفحك مباشرة دون رفع ملفاتك لأي خادم خارجي.
+  </div>
+
+  <!-- AdSense Unit 1 -->
+  <div style="margin-top: 20px; width: 100%; max-width: 650px; text-align: center;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-1583187708021921"
+         data-ad-slot="6543773296"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- AdSense Unit 2 -->
+  <div style="margin-top: 15px; width: 100%; max-width: 650px; text-align: center;">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-format="autorelaxed"
+         data-ad-client="ca-pub-1583187708021921"
+         data-ad-slot="1616704072"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </div>
 
   <script>
@@ -317,7 +336,6 @@
       const statusArea = document.getElementById('status-area');
       const baseName = selectedFile.name.substring(0, selectedFile.name.lastIndexOf('.')) || selectedFile.name;
 
-      // حماية ضد انهيار المتصفح للملفات الكبيرة (أكثر من 150 ميجابايت للميديا)
       const maxMediaSize = 150 * 1024 * 1024;
       if ((currentCategory === 'videos' || currentCategory === 'audio') && selectedFile.size > maxMediaSize) {
         statusArea.innerHTML = `<span class="status-error">⚠️ حجم الملف كبير جداً للتحويل المحلي. يرجى اختيار ملف أقل من 150 ميجابايت.</span>`;
@@ -327,7 +345,6 @@
       statusArea.innerHTML = '⏳ Processing... Please wait';
 
       try {
-        // 1. Documents Conversion
         if (currentCategory === 'docs') {
           let textContent = '';
           if (selectedFile.name.toLowerCase().endsWith('.docx')) {
@@ -400,7 +417,6 @@
           }
         }
 
-        // 2. Images Conversion
         if (currentCategory === 'images' || selectedFile.type.startsWith('image/')) {
           if (targetFormat === 'docx') {
             const arrayBuffer = await selectedFile.arrayBuffer();
@@ -467,7 +483,6 @@
           }
         }
 
-        // 3. Audio & Video Conversion
         if (currentCategory === 'videos' || currentCategory === 'audio') {
           statusArea.innerHTML = '⏳ Initializing media engine...';
           
@@ -513,26 +528,5 @@
 
     updateOptions();
   </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1583187708021921"
-     crossorigin="anonymous"></script>
-<!-- C1 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1583187708021921"
-     data-ad-slot="6543773296"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1583187708021921"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-1583187708021921"
-     data-ad-slot="1616704072"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 </body>
 </html>
